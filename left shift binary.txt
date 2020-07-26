@@ -1,0 +1,13 @@
+number=int(input())
+binary_number=bin(number)[2:]
+count=0
+start=0
+maximum=0
+while count<len(binary_number):
+    shifted_number=binary_number[start:len(binary_number)]+binary_number[0:start]
+    new_value=int(shifted_number,2) 
+    if new_value>maximum:
+        maximum=new_value 
+    start+=1 
+    count+=1 
+print(maximum)
